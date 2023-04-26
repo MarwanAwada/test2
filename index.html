@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>	
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Pragmatic Mates s.r.o. - http://pragmaticmates.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/my.css">
+
+	<title>Happy Birthday</title>
+</head>
+
+<body>
+
+<article id="shape" class="countdown countdown-container container">
+    <section> <h1 id="happy"></h1> <h1 id="letter"></h1></section>
+    <div class="clock-row">
+        <div class="clock-item clock-days countdown-time-value col-xs-4 col-sm-6 col-md-3 ">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-days" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val" id="days">0</p>
+                        <p class="type-days type-time">DAYS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-hours countdown-time-value col-xs-4 col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-hours" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val" id="hours">0</p>
+                        <p class="type-hours type-time">HOURS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-minutes countdown-time-value col-xs-4 col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-minutes" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val" id="mins">0</p>
+                        <p class="type-minutes type-time">MINUTES</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+
+        <div class="clock-item clock-seconds countdown-time-value col-xs-4 col-sm-6 col-md-3">
+            <div class="wrap">
+                <div class="inner">
+                    <div id="canvas-seconds" class="clock-canvas"></div>
+
+                    <div class="text">
+                        <p class="val" id="secs">0</p>
+                        <p class="type-seconds type-time">SECONDS</p>
+                    </div><!-- /.text -->
+                </div><!-- /.inner -->
+            </div><!-- /.wrap -->
+        </div><!-- /.clock-item -->
+    </div><!-- /.clock -->
+</article><!-- /.countdown-wrapper -->
+
+<script>
+    var countDownDate = new Date("April 29, 2023 00:00:00").getTime();
+    var myfunc = setInterval(function(){
+        var now = new Date ().getTime();
+        var timeleft = countDownDate - now;
+        var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(timeleft % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+        var minutes = Math.floor(timeleft % (1000 * 60 * 60) / (1000 * 60));
+        var seconds = Math.floor(timeleft % (1000 * 60) / 1000);
+     document.getElementById("days").innerHTML = days
+     document.getElementById("hours").innerHTML = hours
+     document.getElementById("mins").innerHTML = minutes
+     document.getElementById("secs").innerHTML = seconds
+
+     if (timeleft < 0) {
+        clearInterval(myfunc);
+        $("div").remove();
+        document.getElementById("happy").innerHTML = "HAPPY BIRTHDAY"
+        document.getElementById("letter").innerHTML = "В тот же день, как и сегодня, родился очень добрый, заботливый, весёлый, милый, красивый и умный человек... Можно просто сказать, что в тот же день родилась легенда или чудо. В тот же день, как и сегодня, Бог послал мне с неба падающую звезду, сокровище, которое не может быть измерено всем золотом и деньгами этого мира, и я благодарен за то, что это великолепное сокровище есть в моей скромной жизни. Слова не могут описать, как я счастлив, что ты есть в моей жизни, так что с днём рождения, братик, желаю тебе всего наилучшего в этом мире, потому что самый лучший брат в этом мире заслуживает самое лучшее."
+
+       
+     }
+
+    })
+</script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="kinetic.js"></script>
+<script type="text/javascript" src="jquery.final-countdown.js"></script>
+<script type="text/javascript">  
+    $('document').ready(function() {
+        'use strict';
+        
+    	$('.countdown').final_countdown({
+           'start': (new Date("April 29, 2023 00:0000:00").getTime() - new Date ().getTime() )/1000,
+            'end': new Date("April 29, 2023 00:0000:00").getTime()/1000,
+            'now': new Date ().getTime()/1000,        
+        });
+    });
+</script> 
+
+</body>
+</html>
