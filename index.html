@@ -17,10 +17,10 @@
 
 <body>
 
-<article id="shape" class="countdown countdown-container container">
+<article class="countdown countdown-container container">
     <section> <h1 id="happy"></h1> <h1 id="letter"></h1></section>
-    <div class="clock-row">
-        <div class="clock-item clock-days countdown-time-value col-xs-4 col-sm-6 col-md-3 ">
+    <div class="clock row" id="remove">
+        <div class="clock-item clock-days countdown-time-value col-xs-4 col-sm-6 col-md-3">
             <div class="wrap">
                 <div class="inner">
                     <div id="canvas-days" class="clock-canvas"></div>
@@ -75,7 +75,7 @@
 </article><!-- /.countdown-wrapper -->
 
 <script>
-    var countDownDate = new Date("April 27, 2023 00:00:00").getTime();
+    var countDownDate = new Date("April 29, 2023 00:00:00").getTime();
     var myfunc = setInterval(function(){
         var now = new Date ().getTime();
         var timeleft = countDownDate - now;
@@ -90,11 +90,7 @@
 
      if (timeleft < 0) {
         clearInterval(myfunc);
-        document.getElementById("happy").innerHTML = "HAPPY BIRTHDAY"
-        document.getElementById("letter").innerHTML = "В тот же день, как и сегодня, родился очень добрый, заботливый, весёлый, милый, красивый и умный человек... Можно просто сказать, что в тот же день родилась легенда или чудо. В тот же день, как и сегодня, Бог послал мне с неба падающую звезду, сокровище, которое не может быть измерено всем золотом и деньгами этого мира, и я благодарен за то, что это великолепное сокровище есть в моей скромной жизни. Слова не могут описать, как я счастлив, что ты есть в моей жизни, так что с днём рождения, братик, желаю тебе всего наилучшего в этом мире, потому что самый лучший брат в этом мире заслуживает самое лучшее."
-
-       
-        $("div").remove();
+        document.getElementById("remove").remove();
         document.getElementById("happy").innerHTML = "HAPPY BIRTHDAY"
         document.getElementById("letter").innerHTML = "В тот же день, как и сегодня, родился очень добрый, заботливый, весёлый, милый, красивый и умный человек... Можно просто сказать, что в тот же день родилась легенда или чудо. В тот же день, как и сегодня, Бог послал мне с неба падающую звезду, сокровище, которое не может быть измерено всем золотом и деньгами этого мира, и я благодарен за то, что это великолепное сокровище есть в моей скромной жизни. Слова не могут описать, как я счастлив, что ты есть в моей жизни, так что с днём рождения, братик, желаю тебе всего наилучшего в этом мире, потому что самый лучший брат в этом мире заслуживает самое лучшее."
 
@@ -104,14 +100,7 @@
     })
 </script>
 
-
-
-    
-        
-
-
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/kinetic.js"></script>
 <script type="text/javascript" src="js/jquery.final-countdown.js"></script>
 <script type="text/javascript">  
@@ -119,8 +108,8 @@
         'use strict';
         
     	$('.countdown').final_countdown({
-           'start': (new Date("April 27, 2023 00:0000:00").getTime() - new Date ().getTime() )/1000,
-            'end': new Date("April 27, 2023 00:0000:00").getTime()/1000,
+           'start': (new Date("April 29, 2023 00:00:00").getTime() - new Date ().getTime() )/1000,
+            'end': new Date("April 29, 2023 00:00:00").getTime()/1000,
             'now': new Date ().getTime()/1000,        
         });
     });
