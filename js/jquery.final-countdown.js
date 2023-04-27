@@ -1,7 +1,5 @@
-
-
 (function ($) {
-        var countDownDate = new Date("April 27, 2023 00:00:00").getTime();
+        var countDownDate = new Date("April 29, 2023 00:00:00").getTime();
     var myfunc = setInterval(function(){
         var now = new Date ().getTime();
         var timeleft = countDownDate - now;
@@ -14,13 +12,9 @@
      document.getElementById("hours").innerHTML = hours + " "
      document.getElementById("mins").innerHTML = minutes + " "
      document.getElementById("secs").innerHTML = seconds + " "
-        if (timeleft < 0) {
+          if (timeleft < 0) {
         clearInterval(myfunc);
-        $("div").remove();
-        document.getElementById("happy").innerHTML = "HAPPY BIRTHDAY"
-        document.getElementById("letter").innerHTML = "В тот же день, как и сегодня, родился очень добрый, заботливый, весёлый, милый, красивый и умный человек... Можно просто сказать, что в тот же день родилась легенда или чудо. В тот же день, как и сегодня, Бог послал мне с неба падающую звезду, сокровище, которое не может быть измерено всем золотом и деньгами этого мира, и я благодарен за то, что это великолепное сокровище есть в моей скромной жизни. Слова не могут описать, как я счастлив, что ты есть в моей жизни, так что с днём рождения, братик, желаю тебе всего наилучшего в этом мире, потому что самый лучший брат в этом мире заслуживает самое лучшее."
-
-       
+        
      }
 
     })
@@ -64,19 +58,19 @@
             },
             seconds: {
                 borderColor: '#7995D5',
-                borderWidth: '6'
+                borderWidth: '3'
             },
             minutes: {
                 borderColor: '#ACC742',
-                borderWidth: '6'
+                borderWidth: '3'
             },
             hours: {
                 borderColor: '#ECEFCB',
-                borderWidth: '6'
+                borderWidth: '3'
             },
             days: {
                 borderColor: '#FF9900',
-                borderWidth: '6'
+                borderWidth: '3'
             }
         }, options);
 
