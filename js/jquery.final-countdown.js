@@ -1,5 +1,5 @@
 (function ($) {
-        var countDownDate = new Date("April 27, 2023 22:23:00").getTime();
+        var countDownDate = new Date("April 27, 2023 22:30:00").getTime();
     var myfunc = setInterval(function(){
         var now = new Date ().getTime();
         var timeleft = countDownDate - now;
